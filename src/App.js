@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home/Home';
+import Recipe from './pages/Recipe/Recipe';
+import Search from './pages/Search/Search';
+import Create from './pages/Create/Create';
+import Navbar from './components/Navbar/Navbar';
+import ThemeSelector from './components/ThemeSelector/ThemeSelector';
+import useThemeContext from './hooks/useThemeContext';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { state } = useThemeContext();
+
+    return (
+        <div className={`App ${state.modeColor}`}>
+            <Navbar />
+            <ThemeSelector />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="recipes/:recipeId" element={<Recipe />} />
+                <Route path="search" element={<Search />} />
+                <Route path="create" element={<Create />} />
+                <Route path="edit/:recipeId" element={<Create />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

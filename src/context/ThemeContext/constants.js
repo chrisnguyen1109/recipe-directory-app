@@ -1,0 +1,3 @@
+export const CHANGE_NAV_COLOR = 'CHANGE_NAV_COLOR';
+
+export const CHANGE_MODE_COLOR = 'CHANGE_MODE_COLOR';

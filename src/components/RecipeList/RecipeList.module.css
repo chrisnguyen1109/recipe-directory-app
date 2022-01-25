@@ -1,0 +1,16 @@
+.recipe-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.recipe-list .notfound {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.recipe-list.dark .notfound {
+    filter: invert(1);
+}

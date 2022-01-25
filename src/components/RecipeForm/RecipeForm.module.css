@@ -1,0 +1,46 @@
+.create-form label span {
+    display: block;
+    margin: 30px 0 10px;
+}
+.create-form.dark label span {
+    color: #e4e4e4;
+}
+.create-form p {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+.create-form.dark p {
+    color: #e4e4e4;
+}
+.create-form em {
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+.create-form button {
+    display: block;
+    font-size: 1em;
+    color: #fff;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #58249c;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px auto;
+}
+.create-form button[disabled] {
+    border: 1px solid #999999 !important;
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    pointer-events: none;
+}
+.ingredients {
+    display: flex;
+    align-items: center;
+}
+.ingredients button {
+    margin: 0 0 0 10px;
+}
+.text-error {
+    color: #ca3e51 !important;
+}
